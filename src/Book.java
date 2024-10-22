@@ -28,7 +28,6 @@ public class Book {
         }
         this.borrow = 0;
     }
-//kommentar
     public int getBorrow() {
         return borrow;
     }
