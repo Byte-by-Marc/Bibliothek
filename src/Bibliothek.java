@@ -30,13 +30,7 @@ public final class Bibliothek {
     public String addBook(String bookTitle) throws IOException {
             int countItems = bookDao.getAll().size();
             Book newBook = new Book(countItems, bookTitle);
-            //bookDao.addNew(newBook);
-
-        String filePath = "src/test/user.txt";
-        FileOutputStream fileOutputStream = new FileOutputStream(filePath);
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-        objectOutputStream.writeObject(newBook);
-
+            bookDao.addNew(newBook);
             return bookTitle;
 
     }
